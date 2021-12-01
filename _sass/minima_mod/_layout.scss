@@ -1,3 +1,7 @@
+/* background{
+  color: pink;
+} */
+
 /**
  * Site header
  */
@@ -10,19 +14,59 @@
   // Positioning context for the mobile navigation icon
   position: relative;
 
-  // mod by vms
-  height: 150px;
-/*   background-image: url("images/bonjadim_nucleo_aco.jpg"); */
-  background-image: url("bonjadim_overview.jpg");
-/*   background-image: url("bonjadim_pano_aco.jpg");
-  background-image: url("bonjardim_pano.jpg");
-  background-image: url("bonjardim_pano_cut.jpg"); */
-  background-position: center center;
-  background-size: cover;
+  //MODS by VMS
+  height: 120px;
+
+
+  $imgKey: random(5);
+  $list:bonjardim_nucleo_aco, 
+  bonjardim_overview, 
+  bonjardim_pano, 
+  bonjardim_pano_aco, 
+  bonjardim_pano_cut;
+
+  $nth: nth($list, $imgKey);
+
+  // esta repetição para obrigar o fundo a ficar por trás do texto
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    
+    background-image: url("images/#{$nth}.jpg");
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &:hover{
+
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      
+      background-image: url("images/#{$nth}.jpg");
+      background-position: center center;
+      background-size: cover;
+
+      opacity: 0.5;
+    }
+
+    font-weight: 800;
+  }
+  // END MODS
 
 }
 
 .site-title {
+  position: relative; //MOD by VMS
+
   @include relative-font-size(1.625);
   font-weight: 300;
   letter-spacing: -1px;
@@ -39,12 +83,13 @@
   }
 }
 
-.site-nav {
+.site-nav { 
+  // quadradinho das opções de navegação
   position: absolute;
-  bottom: 9px;
+  top: 9px;
   right: $spacing-unit / 2;
   background-color: $background-color;
-  border: 1px solid $border-color-01;
+  //border: 1px solid $border-color-01; MOD by VMS
   border-radius: 5px;
   text-align: right;
 
@@ -85,7 +130,10 @@
   }
 
   .page-link {
-    color: $text-color;
+    //bottom: 9px; //MOD by VMS
+    color: $text-color; //$brand-color-light;// MOD by VMS
+    font-weight: lighter; //MOD by VMS
+    text-transform:uppercase; //MOD by VMS
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
@@ -98,7 +146,7 @@
   }
 
   @media screen and (min-width: $on-medium) {
-    position: static;
+    position: relative; //static; MOD by VMS
     float: right;
     border: none;
     background-color: inherit;
