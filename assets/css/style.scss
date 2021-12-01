@@ -3,5 +3,6 @@
 ---
 
 @import
-  "minima/skins/{{ site.minima.skin | default: 'classic' }}",
-  "minima/initialize";
+  "minima_mod/skins/{{ site.minima.skin | default: 'classic' }}",
+  "minima_mod/initialize",
+  "my-theme/caller";
