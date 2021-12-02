@@ -41,7 +41,7 @@
     background-size: cover;
   }
 
-  &:hover{
+  &:hover{ //hover is in .site-header so when you hover on it everything happens
 
     &:before{
       content: '';
@@ -57,21 +57,29 @@
 
       opacity: 0.5;
     }
+    .site-title{
+      font-weight: 700;
+      //font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .site-nav{
+      font-weight: 900;
+    }
 
-    font-weight: 800;
   }
   // END MODS
 
 }
 
-.site-title {
+.site-title { //some :hover mods are on .site-header
   position: relative; //MOD by VMS
 
-  @include relative-font-size(1.625);
-  font-weight: 300;
-  letter-spacing: -1px;
+  @include relative-font-size(2.2); //1.625 MOD by VMS
+  font-weight: 700; //MOD by VMS
+  letter-spacing: -2px;
   margin-bottom: 0;
   float: left;
+  text-shadow: 0px 0px 2px rgb(0, 0, 0); //MOD by VMS
+  padding-bottom: 8px;//MOD by VMS -to push nav-bar down... ideally should adjust the nav-bar, but i can't!
 
   @include media-query($on-palm) {
     padding-right: 45px;
@@ -81,9 +89,10 @@
   &:visited {
     color: $site-title-color;
   }
+
 }
 
-.site-nav { 
+.site-nav { //some :hover mods are on .site-header
   // quadradinho das opções de navegação
   position: absolute;
   top: 9px;
@@ -142,7 +151,7 @@
     &:not(:last-child) {
       margin-right: 0;
     }
-    margin-left: 20px;
+    margin-left: 20px;    
   }
 
   @media screen and (min-width: $on-medium) {
@@ -150,6 +159,7 @@
     float: right;
     border: none;
     background-color: inherit;
+
 
     label[for="nav-trigger"] {
       display: none;
