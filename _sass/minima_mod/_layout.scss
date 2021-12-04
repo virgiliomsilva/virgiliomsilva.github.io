@@ -18,12 +18,13 @@
   height: 120px;
 
 
-  $imgKey: random(5);
-  $list:bonjardim_nucleo_aco, 
+  $list:
+  bonjardim_nucleo_aco, 
   bonjardim_overview, 
-  bonjardim_pano, 
   bonjardim_pano_aco, 
   bonjardim_pano_cut;
+  
+  $imgKey: random(4);
 
   $nth: nth($list, $imgKey);
 

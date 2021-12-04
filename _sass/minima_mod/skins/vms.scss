@@ -6,7 +6,7 @@ $brand-color:           #828282 !default;
 $brand-color-light:     lighten($brand-color, 40%) !default;
 $brand-color-dark:      darken($brand-color, 25%) !default;
 
-$site-title-color:      rgb(94, 138, 180);//$brand-color-dark !default;
+$site-title-color:      rgb(255, 255, 255);// rgb(94, 138, 180);//$brand-color-dark !default;
 
 $text-color:            #111111 !default;
 $background-color:      rgba(255, 255, 255, 0.5);//#fdfdfd !default; MOD by VMS

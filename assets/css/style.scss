@@ -4,5 +4,4 @@
 
 @import
   "minima_mod/skins/{{ site.minima.skin | default: 'vms' }}",
-  "minima_mod/initialize",
-  "my-theme/caller";
+  "minima_mod/initialize";
