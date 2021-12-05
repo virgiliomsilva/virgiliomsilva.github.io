@@ -211,6 +211,15 @@
   margin-left: 0;
 }
 
+// MODS by VMS
+.copyright {
+  list-style: none;
+  margin-left: 0px;
+  //font-variant: small-caps;
+  font-size: smaller;
+  text-transform: uppercase
+}
+
 .footer-col-wrapper,
 .social-links {
   @include relative-font-size(0.9375);

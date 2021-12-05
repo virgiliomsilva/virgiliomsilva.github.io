@@ -5,33 +5,38 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col">
-        <p class="feed-subscribe">
+<!--         <p class="feed-subscribe">      // dont need this shit VMS
           <a href="{{ 'feed.xml' | relative_url }}">
             <svg class="svg-icon orange">
               <use xlink:href="{{ 'assets/minima-social-icons.svg#rss' | relative_url }}"></use>
             </svg><span>Subscribe</span>
           </a>
-        </p>
-      {%- if site.author %}
+        </p> -->
+
+<!--         MOVED SOCIAL TO HERE VMS -->
+        <div class="social-links">
+          {%- include social.html -%}
+        </div>
+
+        <br>
+        
         <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+          {%- if site.author %}
+            {% if site.author.name -%}
+              <li class="p-name">{{ site.author.name | escape }}</li>
+            {% endif -%}
+  <!--           {% if site.author.email -%} VMS
+              <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            {%- endif %} -->            
           {%- endif %}
+<!--           added this copyright VMS-->
+          <li class="copyright">all content copyright (c) <script>document.write(new Date().getFullYear())</script> </li>
         </ul>
-      {%- endif %}
       </div>
       <div class="footer-col">
         <p>{{ site.description | escape }}</p>
       </div>
     </div>
-
-    <div class="social-links">
-      {%- include social.html -%}
-    </div>
-
   </div>
 
 </footer>
