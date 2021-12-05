@@ -58,13 +58,12 @@
 
       opacity: 0.5;
     }
-    .site-title{
-      font-weight: 700;
-      //font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .site-nav{
-      font-weight: 900;
-    }
+
+    .page-link {
+      color: rgb(0, 0, 0); // MOD by VMS rgb(0, 0, 0);// $text-color; //$brand-color-light; $brand-color-dark
+      //text-shadow: 0px 0px 0px rgb(0, 0, 0); //MOD by VMS      
+      opacity: 1;
+      } 
 
   }
   // END MODS
@@ -80,7 +79,7 @@
   margin-bottom: 0;
   float: left;
   text-shadow: 0px 0px 2px rgb(0, 0, 0); //MOD by VMS
-  padding-bottom: 8px;//MOD by VMS -to push nav-bar down... ideally should adjust the nav-bar, but i can't!
+  padding-bottom: 15px;//MOD by VMS -to push nav-bar down... ideally should adjust the nav-bar, but i can't!
 
   @include media-query($on-palm) {
     padding-right: 45px;
@@ -99,7 +98,6 @@
   top: 9px;
   right: $spacing-unit / 2;
   background-color: $background-color;
-  //border: 1px solid $border-color-01; MOD by VMS
   border-radius: 5px;
   text-align: right;
 
@@ -141,9 +139,10 @@
 
   .page-link {
     //bottom: 9px; //MOD by VMS
-    color: $text-color; //$brand-color-light;// MOD by VMS
-    font-weight: lighter; //MOD by VMS
-    text-transform:uppercase; //MOD by VMS
+    color: rgb(255, 255, 255);//$text-color; //$brand-color-light;// MOD by VMS
+    font-weight: 800;//MOD by VMS
+    opacity: 0.35;//MOD by VMS
+    text-transform: uppercase; //MOD by VMS
     line-height: $base-line-height;
     display: block;
     padding: 5px 10px;
@@ -212,6 +211,10 @@
 }
 
 // MODS by VMS
+.social-links{
+  margin-left: -5px;
+}
+
 .copyright {
   list-style: none;
   margin-left: 0px;
@@ -219,6 +222,7 @@
   font-size: smaller;
   text-transform: uppercase
 }
+// end MODS by VMS
 
 .footer-col-wrapper,
 .social-links {
