@@ -1,0 +1,40 @@
+ .contacts-widgets{
+/*   display: flex;
+  justify-content: center;
+  text-align: center; */
+  display: inline-block;
+}
+
+.linkedin{
+  width: 255px;
+/*   width: 50%; */
+  height: 255px;
+}
+
+
+  /*   .github{
+  } */
+
+
+.twitter{
+  width: 255px;
+/*   width: 50%; */
+  height: 255px;
+/*   float: right; */
+}
+
+.twitter-follow{
+  width: 255px;
+  height: 20px;
+}
+
+.twitter-tl{
+  width: 255px;
+  height: 235px;
+}
+
+
+.contact-form{
+  display: flex;
+  justify-content: center;
+}

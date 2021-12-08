@@ -45,7 +45,8 @@ $on-large:         $on-laptop !default;
 @import
 //  "minima_mod/custom-variables", // Hook to override predefined variables.
   "minima_mod/base",             // Defines element resets.
-  "minima_mod/layout"           // Defines structure and style based on CSS selectors.
+  "minima_mod/layout",           // Defines structure and style based on CSS selectors.
 //  "minima_mod/custom-styles"     // Hook to override existing styles.
+  "minima_mod/contacts"
 ;
 // comentei os custom porque não os uso VMS

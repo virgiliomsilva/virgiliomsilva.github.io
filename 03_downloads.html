@@ -4,17 +4,16 @@ title: Downloads
 permalink: /downloads/
 ---
 
-<p>Here are avaliable some of the spreadsheets that I've developed through the years working as
-    Strucutural Engineer. They are shared under The Clear BSD License (read below).</p>
+<p>Here are avaliable some of the spreadsheets that I've developed through the years working as Strucutural Engineer. They are shared under The Clear BSD License (read below).</p>
+
 <br>
 
-
-{% for ID in site.data.spreadsheets%}
+{% for ID in site.data.spreadsheets %}
     <a href="{{ID.URL}}">[{{ID.Language}}] - {{ID.Name}}</a> <br>
-{% endfor%}
-
+{% endfor %}
 
 <br>
+
 <p>The Clear BSD License</p>
 <p>Copyright (c) <script>document.write(new Date().getFullYear())</script> {{ site.author.name }} </p>
 <p>All rights reserved.</p>

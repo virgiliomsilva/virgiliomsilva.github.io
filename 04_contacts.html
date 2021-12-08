@@ -4,9 +4,45 @@ title: Contacts
 permalink: /contacts/
 ---
 
-
-<p>linkedin</p>
-<p>github</p>
-<p>twitter</p>
-<p>web form > email</p>
 <p>Feel free to send me a message with suggestions, questions or enquiries.</p>
+<br>
+
+<div class="contacts-widgets"></div>
+
+    <!-- LINKEDIN -->
+    <div class="linkedin">
+
+        <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+        <!-- theme can be light or dark -->
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="light" data-type="VERTICAL" data-vanity={{ site.linkedin_username }} data-version="v1"></div>
+              
+        <!-- REMOVED THIS PART VMS
+        
+        <a class="badge-base__link LI-simple-link" href="https://pt.linkedin.com/in/virgiliomsilva?trk=profile-badge">Virgílio Matos Silva</a>-->
+    </div>
+
+
+    <!-- GITHUB -->
+<!--     <div class="github">
+        <div class="github-profile-badge" data-user={{ site.github_username }}></div>
+        <script src="https://cdn.jsdelivr.net/gh/Rapsssito/github-profile-badge@latest/src/widget.min.js"></script>
+    </div> -->
+
+
+    <!-- TWITTER -->
+    <div class="twitter">
+        <div class="twitter-follow">
+            <a href="https://twitter.com/{{ site.twitter_username }}?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @{{ site.twitter_username }}</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="twitter-tl">
+            <a class="twitter-timeline" data-width="255" data-height="235" href="https://twitter.com/{{ site.twitter_username }}?ref_src=twsrc%5Etfw">Tweets by {{ site.twitter_username }}</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+        </div>
+
+    </div>
+</div>
+
+<div class="contact-form">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdC7WjJuxRAqrBN0m82dVvwEnTKnNS_agQA4eXn-2cFWEeveg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+</div>
